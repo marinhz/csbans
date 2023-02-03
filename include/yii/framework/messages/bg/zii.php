@@ -15,7 +15,7 @@
  */
 return array (
   'Are you sure you want to delete this item?' => 'Сигурни ли сте че искате да изтриете този елемент?',
-  'Home' => 'Начало',
+  'Home' => ''Начало'',
   'The button type "{type}" is not supported.' => 'Не се поддържа бутон от тип "{type}"',
   'Delete' => 'Изтрий',
   'Displaying {start}-{end} of 1 result.|Displaying {start}-{end} of {count} results.' => 'Показване на {start}-{end} от {count}.',
