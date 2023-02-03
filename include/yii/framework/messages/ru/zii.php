@@ -24,7 +24,7 @@ return array (
   'Displaying {start}-{end} of 1 result.|Displaying {start}-{end} of {count} results.' => 'Элементы {start}—{end} из {count}.',
   'Either "name" or "value" must be specified for CDataColumn.' => 'Для CDataColumn необходимо указать "name" или "value".',
   'Home' => 'Начало',
-  'No results found.' => 'Не результатов.',
+  'No results found.' => 'Няма резултати.',
   'Not set' => 'Не задан',
   'Please specify the "attributes" property.' => 'Задайте свойство "attributes".',
   'Please specify the "data" property.' => 'Задайте свойство "data".',

@@ -53,8 +53,8 @@ define('MODULES_MATCHES', implode('|', array_keys($modules)));
 return array(
 	'basePath'=>ROOTPATH . DIRECTORY_SEPARATOR . 'protected',
 	'name'=>'СS:Bans 1.3',
-	'sourceLanguage' => 'ru',
-	'language'=>'ru',
+	'sourceLanguage' => 'bg',
+	'language'=>'bg',
 
 	// Предзагружаемые компоненты
 	'preload'=>array(

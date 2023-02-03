@@ -67,7 +67,7 @@ $this->widget('bootstrap.widgets.TbGridView',array(
 				'model' => $model,
 				'id' => 'timestamp',
 				'attribute' => 'timestamp',
-				'language' => 'ru',
+				'language' => 'bg',
 				'i18nScriptFile' => 'jquery-ui-i18n.min.js',
 				'htmlOptions' => array(
 					'id' => 'timestamp',
@@ -99,7 +99,7 @@ $this->widget('bootstrap.widgets.TbGridView',array(
 
 Yii::app()->clientScript->registerScript('re-install-date-picker', "
 	function reinstallDatePicker(id, data) {
-		$('#timestamp').datepicker(jQuery.extend({showMonthAfterYear:false},jQuery.datepicker.regional['ru'],{'showAnim':'fold'}));
+		$('#timestamp').datepicker(jQuery.extend({showMonthAfterYear:false},jQuery.datepicker.regional['bg'],{'showAnim':'fold'}));
 	}
 ");
 ?>
