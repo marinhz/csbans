@@ -50,9 +50,9 @@ $('.search-form form').submit(function(){
 	$ip = $_SERVER['REMOTE_ADDR'];
 	echo $check
 			?
-		'<strong>Внимание!</strong> Вашето IP (<strong>'.$ip.'</strong>) забранен'
+		'<strong>Внимание!</strong> Вашето IP (<strong>'.$ip.'</strong>) е забранено'
 			:
-		'Вашето IP (<strong>'.$ip.'</strong>) не е забранен'
+		'Вашето IP (<strong>'.$ip.'</strong>) не е забранено'
 	?>
 </div>
 

@@ -372,7 +372,7 @@ class AmxadminsController extends Controller
 	}
 
 	/**
-	 * Управление админи серверов
+	 * Администриране на админ сървъри
 	 */
 	public function actionAdmin()
 	{

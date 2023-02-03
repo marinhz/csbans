@@ -184,7 +184,7 @@ return array (
   'The pattern for era must be "G", "GG", "GGG", "GGGG" or "GGGGG".' => 'Шаблон для эры: "G", "GG", "GGG", "GGGG", либо "GGGGG".',
   'The pattern for hour in AM/PM must be "K" or "KK".' => 'Шаблон для часа в формате AM/PM: "K", либо "KK".',
   'The pattern for hour in day must be "k" or "kk".' => 'Шаблон для часа в дне: "k", либо "kk".',
-  'The pattern for minutes must be "m" or "mm".' => 'Шаблон для минут: "m", либо "mm".',
+  'The pattern for minutes must be "m" or "mm".' => 'Шаблон для минути: "m", либо "mm".',
   'The pattern for month must be "M", "MM", "MMM", "MMMM", "L", "LL", "LLL" or "LLLL".' => 'Шаблон для месяца должен быть  "M", "MM", "MMM", "MMMM", "L", "LL", "LLL" или "LLLL".',
   'The pattern for seconds must be "s" or "ss".' => 'Шаблон для секунд: "s", либо "ss".',
   'The pattern for time zone must be "z" or "v".' => 'Шаблон для временной зоны: "z", либо "v".',

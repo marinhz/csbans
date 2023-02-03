@@ -23,7 +23,7 @@
  * @property integer $ashow Показывать ли на странице админов
  * @property integer $created Дата добавления
  * @property integer $expired Дата окончания
- * @property integer $days Дней админки
+ * @property integer $days Дни админки
  */
 class Amxadmins extends CActiveRecord
 {
@@ -99,7 +99,7 @@ class Amxadmins extends CActiveRecord
 			'ashow' => 'Показывать в списке админов',
 			'created' => 'Дата добавления',
 			'expired' => 'Изтича',
-			'days' => 'Дней',
+			'days' => 'Дни',
 			'long' => 'Осталось дней',
 			'change' => 'Новый срок',
 			'addtake' => 'Выбор',
@@ -254,32 +254,32 @@ class Amxadmins extends CActiveRecord
         }
 
         if (!$this->access) {
-            $this->addError('access', 'Выберите Флагове за достъп');
+            $this->addError('access', 'Изберете флаг за достъп');
         }
 
         if($this->isNewRecord && $this->flags === 'a' && !$this->password) {
-            $this->addError('password', 'Для админки по нику нужно обязательно указывать пароль');
+            $this->addError('password', 'За админ панела по псевдоним трябва да посочите парола');
         }
 
 		if ($this->flags === 'd' && !filter_var($this->steamid, FILTER_VALIDATE_IP, array('flags' => FILTER_FLAG_IPV4))) {
-            $this->addError('steamid', 'Неверно введен IP');
+            $this->addError('steamid', 'Въведен е грешен IP');
         }
 
         if ($this->flags === 'c' && !Prefs::validate_value($this->steamid, 'steamid')) {
-            $this->addError('steamid', 'Неверно введен SteamID');
+            $this->addError('steamid', 'Въведен е неправилен SteamID');
         }
 
         if ($this->password && !preg_match('#^([a-z0-9]+)$#i', $this->password)) {
-			$this->addError ('password', 'Парола может содержать только буквы латинского алфавита и цифры');
+			$this->addError ('password', 'Паролата може да съдържа само латински букви и цифри');
 		}
 
         if(!$this->isNewRecord && $this->days < $this->change && $this->addtake === '1')
 		{
-			$this->addError ('', 'Грешка! Нельзя забрать дней больше, чем у него уже есть');
+			$this->addError ('', 'Грешка! Не може да отнеме повече дни, отколкото вече има');
 		}
 
         if(empty($this->servers)) {
-            $this->addError ('servers', 'Выберите хотябы один сервер');
+            $this->addError ('servers', 'Моля, изберете поне един сървър');
         }
 
         if($this->hasErrors()) {
@@ -301,7 +301,7 @@ class Amxadmins extends CActiveRecord
 			if(isset($flags[$flag])) {
                 $return = $flags[$flag];
                 if(!isset($get[1])) {
-                    $return .= ' + пароль';
+                    $return .= ' + парола';
                 }
 				return $return;
 			}

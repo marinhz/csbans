@@ -12,15 +12,15 @@
  * @license http://creativecommons.org/licenses/by-nc-sa/4.0/deed.ru  «Attribution-NonCommercial-ShareAlike»
  */
 
-$this->pageTitle = Yii::app()->name .' :: Административен център - Администраторы серверов';
+$this->pageTitle = Yii::app()->name .' :: Административен център - Сървърни администратори';
 $this->breadcrumbs=array(
 	'Административен център' => array('/admin/index'),
-	'Администраторы серверов',
+	'Сървърни администратори',
 );
 
 $this->renderPartial('/admin/mainmenu', array('active' =>'server', 'activebtn' => 'servadmassign'));
 ?>
-<h2>Управление админи серверов</h2>
+<h2>Администриране на админ сървъри</h2>
 <?php
 
 Yii::app()->clientScript->registerScript('serverview', '
@@ -84,7 +84,7 @@ function checkaccess(hash)
 
 <div class="modal-header">
     <a class="close" data-dismiss="modal"  data-placement="bottom">&times;</a>
-    <h4>Выберите админов</h4>
+    <h4>Изберете администратори</h4>
 </div>
 
 <div class="modal-body">

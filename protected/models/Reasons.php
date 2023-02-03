@@ -75,7 +75,7 @@ class Reasons extends CActiveRecord
 		}
 
 		if($addban)
-			$list['selfreason'] = 'Другая причина';
+			$list['selfreason'] = 'Друга причина';
 
 		return $list;
 	}

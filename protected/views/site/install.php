@@ -63,7 +63,7 @@ $this->breadcrumbs=array(
 	<label class="checkbox"><?php echo CHtml::activeCheckBox($form, 'license'); ?> Я принимаю условия <?php
 		echo CHtml::link('лицензионного соглашения', array('/site/license'), array('target' => '_blank')) ?></label><br>
 	<br>
-	<?php echo CHtml::submitButton('Установить', array('class' => 'btn btn-primary')); ?><br>
+	<?php echo CHtml::submitButton('Инсталирай', array('class' => 'btn btn-primary')); ?><br>
 
 	<?php echo CHtml::endForm(); ?>
 

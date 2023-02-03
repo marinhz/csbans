@@ -1,6 +1,6 @@
 <?php
 /**
- * Управление AmxModX админи
+ * Управление на AmxModX админи
  */
 
 /**
@@ -25,7 +25,7 @@ $this->menu=array(
 );
 ?>
 
-<h2>Управление AmxModX админи</h2>
+<h2>Управление на AmxModX админи</h2>
 
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
 	'type' => 'bordered stripped',

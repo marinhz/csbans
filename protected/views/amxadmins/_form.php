@@ -119,7 +119,7 @@ $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 
     if(!$model->isNewRecord && $model->flags != 'a' && $model->password) {
         $htmlOptions = array(
-            'append' => '<label>'.CHtml::checkBox('removePwd') . ' Изтрий пароль</label>',
+            'append' => '<label>'.CHtml::checkBox('removePwd') . ' Изтрий парола</label>',
             'style' => 'width: 167px',
             'value' => isset($_POST['Amxadmins']['password']) ? CHtml::encode($_POST['Amxadmins']['password']) : '',
         );
@@ -155,7 +155,7 @@ $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 			array(
 				'class' => 'span6',
 				'value' => '30',
-				'append' => '<label>'.CHtml::checkBox('', false, array('id' => 'forever')) . ' навсегда</label>'
+				'append' => '<label>'.CHtml::checkBox('', false, array('id' => 'forever')) . ' завинаги</label>'
 			)
 		);
 
@@ -183,7 +183,7 @@ $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 			)
 		);
 	endif;?>
-	<label for="Amxadmins_change">Изменить срок админки</label>
+	<label for="Amxadmins_change">Промяна на  крайния срок на админ</label>
 	<div class="row-fluid">
 		<div class="span2">
 
@@ -191,7 +191,7 @@ $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 
 			<?php if($model->long > 0): ?>
 
-				<label class="radio"><input id="Amxadmins_addtake_1" value="1" type="radio" name="Amxadmins[addtake]" /> Забрать</label>
+				<label class="radio"><input id="Amxadmins_addtake_1" value="1" type="radio" name="Amxadmins[addtake]" /> Вземи</label>
 
 			<?php endif ?>
 
@@ -200,7 +200,7 @@ $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 		<div class="offset2 span2">
 			<div class="input-append pull-right" style="padding-top: 5px">
 				<input class="input-small" name="Amxadmins[change]" id="Amxadmins_change" type="text" />
-				<span class="add-on">Дней</span>
+				<span class="add-on">Дни</span>
 			</div>
 		</div>
 	</div>
@@ -216,11 +216,11 @@ $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	)); ?>
 	<div class="modal-header">
 		<a class="close" data-dismiss="modal" rel="tooltip" data-placement="left" title="Затвори">&times;</a>
-		<h4>Выбор флагов доступа</h4>
+		<h4>Избор на флагове за достъп</h4>
 	</div>
 	<div class="modal-body">
 		<label class="checkbox">
-			<input type="checkbox" id="checkAllFlags"> Выбрать все (кроме z)
+			<input type="checkbox" id="checkAllFlags"> Изберете всички (с изключение на z)
 		</label>
 		<?php
 			echo $form->checkboxListRow($model, 'accessflags', Amxadmins::getFlags(), array('class' => 'adminflag'));
@@ -228,7 +228,7 @@ $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	</div>
 	<div class="modal-footer">
 		<?php $this->widget('bootstrap.widgets.TbButton', array(
-			'label'=>'Установить',
+			'label'=>'Инсталирай',
 			'type'=>'primary',
 			'htmlOptions'=>array(
 				'id'=>'setFlags',
@@ -249,7 +249,7 @@ $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 		<hr class="row-divider">
 		<button class="btn btn-info" type="button" onclick="$('#webrights').slideToggle('slow');">Добави WEB админ</button>
 		<div id="webrights" style="display: none"><br>
-			<?php echo $form->textFieldRow($webadmins,'username',array('class' => 'span6','size'=>32,'maxlength'=>32, 'value' => 'Будет использован ник Amx админ', 'disabled' => 'disabled'));?>
+			<?php echo $form->textFieldRow($webadmins,'username',array('class' => 'span6','size'=>32,'maxlength'=>32, 'value' => 'Ще се използва ник Amx admin', 'disabled' => 'disabled'));?>
 			<?php echo $form->passwordFieldRow($webadmins,'password',array('class' => 'span6','size'=>32,'maxlength'=>32, 'value' => '')); ?>
 			<?php echo $form->textFieldRow($webadmins,'email',array('class' => 'span6','size'=>60,'maxlength'=>64)); ?>
 			<?php echo $form->dropdownListRow($webadmins,'level', Levels::getList(), array('class' => 'span6')); ?>

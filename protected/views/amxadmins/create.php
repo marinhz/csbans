@@ -12,17 +12,17 @@
  * @license http://creativecommons.org/licenses/by-nc-sa/4.0/deed.ru  «Attribution-NonCommercial-ShareAlike»
  */
 
-$this->pageTitle = Yii::app()->name . ' :: Административен център - Добавление AmxModX админ';
+$this->pageTitle = Yii::app()->name . ' :: Административен център - Добавяне на AmxModX админ';
 $this->breadcrumbs = array(
 	'Административен център' => array('/admin/index'),
 	'AmxModX админ' => array('admin'),
-	'Добавление AmxModX админ'
+	'Добавяне на AmxModX админ'
 );
 
 $this->renderPartial('/admin/mainmenu', array('active' =>'server', 'activebtn' => 'servamxadmins'));
 
 $this->menu=array(
-	array('label'=>'Управление админи', 'url'=>array('admin')),
+	array('label'=>'Администраторско управление', 'url'=>array('admin')),
 );
 ?>
 

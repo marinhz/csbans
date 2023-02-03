@@ -232,7 +232,7 @@ class AdminController   extends Controller
 			if(!$info['players'])
 				$js .= "<tr class=\"error\"><td colspan=\"7\">Няма играчи</td></tr>";
 			elseif(!$players = $server->getPlayersInfo())
-				$js .= "<tr class=\"error\"><td colspan=\"7\">Грешка получения информации (проверьте RCON пароль)</td></tr>";
+				$js .= "<tr class=\"error\"><td colspan=\"7\">Грешка при извличане на информация (проверете паролата за RCON)</td></tr>";
 			else {
 				foreach($players as $key => $player)
 				{

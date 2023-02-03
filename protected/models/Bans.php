@@ -12,9 +12,9 @@
  * Модель для таблицы "{{bans}}".
  * Доступные поля таблицы '{{bans}}':
  * @property integer $bid ID бана
- * @property string $player_ip IP игрока
- * @property string $player_id Стим игрока
- * @property string $player_nick Ник игрока
+ * @property string $player_ip IP играч
+ * @property string $player_id Стим играч
+ * @property string $player_nick Ник на играча
  * @property string $admin_ip IP админ
  * @property string $admin_id Стим админ
  * @property string $admin_nick Ник админ
@@ -111,9 +111,9 @@ class Bans extends CActiveRecord
 	{
 		return array(
 			'bid'				=> 'Bid',
-			'player_ip'			=> 'IP игрока',
-			'player_id'			=> 'Steam  игрока',
-			'player_nick'		=> 'Ник игрока',
+			'player_ip'			=> 'IP играч',
+			'player_id'			=> 'Steam  играч',
+			'player_nick'		=> 'Ник на играча',
 			'admin_ip'			=> 'IP админ',
 			'admin_id'			=> 'Steam ID админ',
 			'admin_nick'		=> 'Ник админ',
@@ -171,22 +171,22 @@ class Bans extends CActiveRecord
 
 	public function afterSave() {
 		if ($this->isNewRecord) {
-            Syslog::add(Logs::LOG_ADDED, 'Добавлен новый бан игрока <strong>' . $this->player_nick . '</strong>');
+            Syslog::add(Logs::LOG_ADDED, 'Добавлен новый бан играч <strong>' . $this->player_nick . '</strong>');
         } else {
-            Syslog::add(Logs::LOG_EDITED, 'Изменены детали бана игрока <strong>' . $this->player_nick . '</strong>');
+            Syslog::add(Logs::LOG_EDITED, 'Изменены детали бана играч <strong>' . $this->player_nick . '</strong>');
         }
         return parent::afterSave();
 	}
 
 	public function afterDelete() {
-		Syslog::add(Logs::LOG_DELETED, 'Удален бан игрока <strong>' . $this->player_nick . '</strong>');
+		Syslog::add(Logs::LOG_DELETED, 'Удален бан играч <strong>' . $this->player_nick . '</strong>');
 		return parent::afterDelete();
 	}
 
 	protected function beforeValidate() {
 		if($this->isNewRecord) {
 			if (!filter_var($this->player_ip, FILTER_VALIDATE_IP, array('flags' => FILTER_FLAG_IPV4))) {
-                return $this->addError($this->player_ip, 'Неверно введен IP');
+                return $this->addError($this->player_ip, 'Въведен е грешен IP');
             }
 
             if($this->player_ip && Bans::model()->count('`player_ip` = :ip AND (`ban_length` = 0 OR `ban_created` + (`ban_length` * 60) >= UNIX_TIMESTAMP())', array(
@@ -215,15 +215,15 @@ class Bans extends CActiveRecord
 	{
 		return array(
 			'0'			=> 'Завинаги',
-			'5'			=> '5 минут',
-			'10'		=> '10 минут',
-			'15'		=> '15 минут',
-			'30'		=> '30 минут',
+			'5'			=> '5 минути',
+			'10'		=> '10 минути',
+			'15'		=> '15 минути',
+			'30'		=> '30 минути',
 			'60'		=> '1 час',
 			'120'		=> '2 часа',
 			'180'		=> '3 часа',
-			'300'		=> '5 часов',
-			'600'		=> '10 часов',
+			'300'		=> '5 часа',
+			'600'		=> '10 часа',
 			'1440'		=> '1 ден',
 			'4320'		=> '3 дня',
 			'10080'		=> '1 седмица',

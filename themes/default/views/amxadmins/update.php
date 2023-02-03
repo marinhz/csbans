@@ -23,7 +23,7 @@ $this->renderPartial('/admin/mainmenu', array('active' =>'server', 'activebtn' =
 
 $this->menu=array(
 	array('label'=>'Добави AmxModX админ', 'url'=>array('create')),
-	array('label'=>'Управление AmxModX админи', 'url'=>array('admin')),
+	array('label'=>'Управление на AmxModX админи', 'url'=>array('admin')),
 );
 ?>
 
