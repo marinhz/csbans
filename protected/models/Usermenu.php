@@ -88,7 +88,7 @@ class Usermenu extends CActiveRecord
 		) {
 			return array(
 				array(
-					'label' => 'Главная',
+					'label' => Начало,
 					'url' => '../',
 				)
 			);
@@ -108,10 +108,10 @@ class Usermenu extends CActiveRecord
 
 		// Проверки на ланг ключи (чтобы не было проблем со ссылками после обновления)
 		$match = array(
-			'_HOME' => 'Главная',
+			'_HOME' => Начало,
 			'_BANLIST' => 'Банлист',
 			'_SERVER' => 'Сървъри',
-			'_ADMLIST' => 'Админы',
+			'_ADMLIST' => 'Администратори',
 			'_SEARCH' => 'Търсене',
 			'_LOGIN' => 'Вход',
 			'_LOGOUT' => 'Излез',

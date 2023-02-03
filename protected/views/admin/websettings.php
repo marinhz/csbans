@@ -46,10 +46,10 @@ $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	<?php //echo $form->textFieldRow($model, 'banner_url'); ?>
 	<?php echo $form->dropDownListRow($model, 'design', $themes); ?>
 	<?php echo $form->dropDownListRow($model, 'start_page', array(
-		'/site/index' => 'Главная',
+		'/site/index' => Начало,
 		'/bans/index' => 'Банлист',
 		'/serverinfo/index' => 'Сървъри',
-		'/amxadmins/index' => 'Админы',
+		'/amxadmins/index' => 'Администратори',
 	));
 	?>
 	<legend>Коментари</legend>
