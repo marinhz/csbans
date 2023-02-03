@@ -60,7 +60,7 @@ class Levels extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'level' => 'Уровень',
+			'level' => 'Ниво',
 			'bans_add' => 'Добави бан',
 			'bans_edit' => 'Изменять бан',
 			'bans_delete' => 'Удалять бан',

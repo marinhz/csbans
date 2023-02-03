@@ -15,7 +15,7 @@
  * @property integer $id ID веб админ
  * @property string $username Логин
  * @property string $password Парола
- * @property integer $level Уровень
+ * @property integer $level Ниво
  * @property string $logcode Хуйпоймичё =)
  * @property string $email Почта
  * @property integer $last_action Последний визит
@@ -121,7 +121,7 @@ class Webadmins extends CActiveRecord
 			'id' => 'ID',
 			'username' => 'Логин',
 			'password' => 'Парола',
-			'level' => 'Уровень',
+			'level' => 'Ниво',
 			'logcode' => 'Logcode',
 			'email' => 'Email',
 			'last_action' => 'Последнее действие',

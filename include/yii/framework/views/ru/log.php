@@ -7,7 +7,7 @@
 	</tr>
 	<tr style="background-color: #ccc;">
 	    <th style="width:120px">Време</th>
-		<th>Уровень</th>
+		<th>Ниво</th>
 		<th>Категория</th>
 		<th>Сообщение</th>
 	</tr>
