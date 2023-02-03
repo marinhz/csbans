@@ -38,7 +38,7 @@ class Logs extends CActiveRecord
 			self::LOG_ADDED => 'Добавление',
 			self::LOG_EDITED => 'Редактирование',
 			self::LOG_DELETED => 'Удаление',
-			self::LOG_INSTALL => 'Установка',
+			self::LOG_INSTALL => 'Инсталация',
 		);
 		if($all)
 			return $types;

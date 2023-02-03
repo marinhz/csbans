@@ -21,7 +21,7 @@
  * @property string $nickname Ник
  * @property integer $icq Контакти
  * @property integer $ashow Показывать ли на странице админов
- * @property integer $created Дата добавления
+ * @property integer $created Дата на добавяне
  * @property integer $expired Дата окончания
  * @property integer $days Дни админки
  */
@@ -97,7 +97,7 @@ class Amxadmins extends CActiveRecord
 			'nickname' => 'Ник',
 			'icq' => 'ICQ',
 			'ashow' => 'Показывать в списке админов',
-			'created' => 'Дата добавления',
+			'created' => 'Дата на добавяне',
 			'expired' => 'Изтича',
 			'days' => 'Дни',
 			'long' => 'Осталось дней',

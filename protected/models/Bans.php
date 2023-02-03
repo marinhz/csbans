@@ -21,7 +21,7 @@
  * @property string $ban_type Тип бан
  * @property string $ban_reason Причина
  * @property string $cs_ban_reason Доп. причина
- * @property integer $ban_created Дата добавления
+ * @property integer $ban_created Дата на добавяне
  * @property integer $ban_length Период на бан
  * @property string $server_ip IP сервера
  * @property string $server_name Име на сървъра

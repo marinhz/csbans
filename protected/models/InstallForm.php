@@ -15,7 +15,7 @@
 class InstallForm extends CFormModel
 {
 	/**
-	 * Хост MySQL
+	 * Host MySQL
 	 * @var string
 	 */
 	public $db_host;
@@ -27,7 +27,7 @@ class InstallForm extends CFormModel
 	public $db_db;
 
 	/**
-	 * Пользователь базы
+	 * Потребител базы
 	 * @var string
 	 */
 	public $db_user;
@@ -90,9 +90,9 @@ class InstallForm extends CFormModel
 	public function attributeLabels()
 	{
 		return array(
-			'db_host'		=> 'Хост',
-			'db_db'			=> 'База данных',
-			'db_user'		=> 'Пользователь',
+			'db_host'		=> 'Host',
+			'db_db'			=> 'База данни',
+			'db_user'		=> 'Потребител',
 			'db_pass'		=> 'Парола',
 			'db_prefix'		=> 'Префикс',
 			'login'			=> 'Логин',

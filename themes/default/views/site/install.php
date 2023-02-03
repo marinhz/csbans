@@ -12,9 +12,9 @@
  * @license http://creativecommons.org/licenses/by-nc-sa/4.0/deed.ru  «Attribution-NonCommercial-ShareAlike»
  */
 
-$this->pageTitle=Yii::app()->name . ' - Установка';
+$this->pageTitle=Yii::app()->name . ' - Инсталация';
 $this->breadcrumbs=array(
-	'Установка',
+	'Инсталация',
 );
 ?>
 
@@ -23,17 +23,17 @@ $this->breadcrumbs=array(
 <?php if(count($error)): ?>
 
 	<div class="alert alert-error">
-	<b>Установка невозможна. Устраните следующие проблемы:</b><br>
+	<b>Инсталиране не е възможно. Коригирайте следните проблеми:</b><br>
 	<ul><?php foreach($error AS $er): ?>
 		<li><?php echo $er; ?></li>
 	<?php endforeach; ?>
 	</ul></div>
 
-	<?php echo CHtml::link('Проверить ещё раз', array('site/install'), array('class' => 'btn')); ?>
+	<?php echo CHtml::link('Провери отново', array('site/install'), array('class' => 'btn')); ?>
 
 <?php elseif($success): ?>
 
-	<div class="alert alert-success">Установка прошла успешно!</div>
+	<div class="alert alert-success">Инсталацията беше успешна!</div>
 
 <?php else: ?>
 
@@ -42,25 +42,25 @@ $this->breadcrumbs=array(
 	<?php echo CHtml::errorSummary($form); ?>
 
 	<fieldset>
-		<legend>Данные для подключения к БД</legend>
-		<?php echo CHtml::activeTextField($form, 'db_host', array('placeholder' => 'Хост')); ?><br>
-		<?php echo CHtml::activeTextField($form, 'db_user', array('placeholder' => 'Пользователь')); ?><br>
+		<legend>Данни за свързване към базата данни</legend>
+		<?php echo CHtml::activeTextField($form, 'db_host', array('placeholder' => 'Host')); ?><br>
+		<?php echo CHtml::activeTextField($form, 'db_user', array('placeholder' => 'Потребител')); ?><br>
 		<?php echo CHtml::activePasswordField($form, 'db_pass', array('placeholder' => 'Парола')); ?><br>
-		<?php echo CHtml::activeTextField($form, 'db_db', array('placeholder' => 'База данных')); ?><br>
-		<?php echo CHtml::activeTextField($form, 'db_prefix', array('placeholder' => 'Префикс таблиц (необязательное)')); ?><br>
-		<?php echo CHtml::ajaxButton('Проверить подключение', '', array('type' => 'post',
+		<?php echo CHtml::activeTextField($form, 'db_db', array('placeholder' => 'База данни')); ?><br>
+		<?php echo CHtml::activeTextField($form, 'db_prefix', array('placeholder' => 'Префикс на таблица (по избор)')); ?><br>
+		<?php echo CHtml::ajaxButton('Проверете връзката', '', array('type' => 'post',
 			'update' =>'#db-status'), array('class' => 'btn btn-small')); ?><br><br>
 		<span id="db-status"></span>
 	</fieldset>
 	<br>
 	<fieldset>
-		<legend>Данные администратора</legend>
+		<legend>Данни на администратора</legend>
 		<?php echo CHtml::activeTextField($form, 'login', array('placeholder' => 'Логин')); ?><br>
 		<?php echo CHtml::activePasswordField($form, 'password', array('placeholder' => 'Парола')); ?><br>
 		<?php echo CHtml::activeEmailField($form, 'email', array('placeholder' => 'E-mail')); ?><br>
 	</fieldset>
 	<br>
-	<label class="checkbox"><?php echo CHtml::activeCheckBox($form, 'license'); ?> Я принимаю условия <?php
+	<label class="checkbox"><?php echo CHtml::activeCheckBox($form, 'license'); ?> Приемам условията <?php
 		echo CHtml::link('лицензионного соглашения', array('/site/license'), array('target' => '_blank')) ?></label><br>
 	<br>
 	<?php echo CHtml::submitButton('Инсталирай', array('class' => 'btn btn-primary')); ?><br>
